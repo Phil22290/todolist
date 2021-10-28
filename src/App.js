@@ -18,10 +18,15 @@ function App() {
 		getLocalTodos();
 	}, []);
 	// USE EFFECT - run function when certain [state] changes
-	useEffect(() => {
-		filterHandler();
-		saveLocalTodos();
-	}, [todos, status]);
+
+	useEffect(
+		() => {
+			filterHandler();
+			saveLocalTodos();
+		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[todos, status]
+	);
 
 	// FUNCTIONS - EVENTS
 
