@@ -24,7 +24,6 @@ function App() {
 			filterHandler();
 			saveLocalTodos();
 		},
-
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[todos, status]
 	);
